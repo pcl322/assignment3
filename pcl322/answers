@@ -1,0 +1,35 @@
+1.
+/usr/lib/python2.7/posixpath.py
+
+2.
+num = !ls -l /etc | grep '^-' | wc -l
+
+3.
+num is a list variable, so we must take num[0] to get the first item
+Howerver num[0] is a string not a floating point number yet
+float() for initialization is needed here
+
+=> numpy.sqrt(float(num[0]))
+=> 9.9498743710661994
+
+4.
+%timeit numpy.square(x)
+1000000 loops, best of 3: 1.18 µs per loop
+
+%timeit x*x
+10000000 loops, best of 3: 41.6 ns per loop
+
+%timeit x**2
+10000000 loops, best of 3: 58.8 ns per loop
+
+=> x*x is the fastest
+
+5.
+Available cell magics:
+%%!  %%HTML  %%SVG  %%bash  %%capture
+%%debug  %%file  %%html  %%javascript  %%latex
+%%perl  %%prun  %%pypy  %%python  %%python3
+%%ruby  %%script  %%sh  %%svg  %%sx
+%%system  %%time  %%timeit  %%writefile
+
+=> 24
